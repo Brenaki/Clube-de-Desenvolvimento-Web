@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-label="middleware-pipeline.svg">
+
+<defs>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+    <path d="M2,2 L10,6 L2,10" fill="none" stroke="#1a1a2e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <marker id="arrow-red" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+    <path d="M2,2 L10,6 L2,10" fill="none" stroke="#be123c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+  <filter id="roughShadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="3" dy="4" stdDeviation="0.5" flood-color="#111827" flood-opacity="0.08"/>
+  </filter>
+  <style>
+    .bg { fill: #ffffff; }
+    .box { fill: #fffefe; stroke: #1a1a2e; stroke-width: 3; stroke-linejoin: round; filter: url(#roughShadow); }
+    .box2 { fill: #fff1f2; stroke: #be123c; stroke-width: 3; stroke-linejoin: round; filter: url(#roughShadow); }
+    .soft { fill: #f9fafb; stroke: #1a1a2e; stroke-width: 2.5; stroke-linejoin: round; filter: url(#roughShadow); }
+    .text { font-family: 'Virgil', 'Comic Sans MS', 'Segoe UI', Arial, sans-serif; fill: #1a1a2e; font-size: 28px; font-weight: 700; }
+    .small { font-family: 'Virgil', 'Comic Sans MS', 'Segoe UI', Arial, sans-serif; fill: #374151; font-size: 18px; font-weight: 600; }
+    .tiny { font-family: 'Virgil', 'Comic Sans MS', 'Segoe UI', Arial, sans-serif; fill: #4b5563; font-size: 15px; }
+    .label { font-family: 'Virgil', 'Comic Sans MS', 'Segoe UI', Arial, sans-serif; fill: #be123c; font-size: 19px; font-weight: 800; }
+    .line { fill: none; stroke: #1a1a2e; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+    .line-red { fill: none; stroke: #be123c; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-red); }
+    .dash { fill: none; stroke: #6b7280; stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 8 8; }
+    .mono { font-family: 'Consolas', 'Monaco', monospace; fill: #111827; font-size: 17px; }
+  </style>
+</defs>
+
+<rect class="bg" width="100%" height="100%"/>
+
+<rect class="soft" x="40" y="250" width="180" height="100" rx="18"/>
+<text class="small" x="82" y="290">Request</text>
+<text class="tiny" x="68" y="320">GET /admin</text>
+
+<rect class="box" x="285" y="220" width="210" height="160" rx="18"/>
+<text class="small" x="330" y="270">Auth</text>
+<text class="tiny" x="315" y="305">tem sessão?</text>
+<text class="tiny" x="315" y="330">usuário existe?</text>
+
+<rect class="box" x="565" y="220" width="230" height="160" rx="18"/>
+<text class="small" x="610" y="270">Permissão</text>
+<text class="tiny" x="600" y="305">role permitido?</text>
+<text class="tiny" x="600" y="330">dono do recurso?</text>
+
+<rect class="box2" x="875" y="220" width="245" height="160" rx="18"/>
+<text class="small" x="920" y="270">Controller</text>
+<text class="tiny" x="920" y="305">executa regra</text>
+<text class="tiny" x="920" y="330">retorna resposta</text>
+
+<path class="line" d="M225 300 L275 300"/>
+<path class="line" d="M500 300 L555 300"/>
+<path class="line" d="M800 300 L865 300"/>
+
+<path class="dash" d="M390 390 C390 460, 250 485, 145 430"/>
+<text class="tiny" x="210" y="500">falhou: 401 Unauthorized</text>
+
+<path class="dash" d="M680 390 C680 475, 820 500, 935 430"/>
+<text class="tiny" x="735" y="530">falhou: 403 Forbidden</text>
+
+</svg>
