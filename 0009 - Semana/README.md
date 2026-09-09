@@ -2,80 +2,43 @@
 marp: true
 theme: default
 paginate: true
+size: 16:9
 style: |
   section {
     background-color: #ffffff;
     color: #1a1a2e;
     font-family: 'Segoe UI', 'Inter', sans-serif;
-    padding: 52px 64px;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  section::after {
-    font-size: 0.72rem;
-    color: #9ca3af;
+    font-size: 23px;
+    line-height: 1.45;
+    padding: 40px 52px;
   }
 
   h1 {
+    font-size: 38px;
+    font-weight: 800;
     color: #1a1a2e;
-    font-size: 1.85rem;
-    font-weight: 700;
-    margin-bottom: 0.5em;
     letter-spacing: -0.02em;
-    border-bottom: 2px solid #be123c;
-    padding-bottom: 0.25em;
+    margin-bottom: 0.35em;
   }
 
   h2 {
-    color: #6b7280;
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
     margin-bottom: 0.3em;
   }
 
   h3 {
-    color: #be123c;
-    font-size: 0.95rem;
+    font-size: 22px;
     font-weight: 700;
-    margin-top: 1em;
-    margin-bottom: 0.3em;
+    color: #be123c;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
+    margin: 0.8em 0 0.3em;
   }
 
   p {
-    margin: 0.4em 0;
-  }
-
-  code {
-    background: #f3f4f6;
-    color: #9d174d;
-    padding: 1px 6px;
-    border-radius: 3px;
-    font-size: 0.87em;
-    font-family: 'Consolas', 'Courier New', monospace;
-    font-weight: 600;
-  }
-
-  pre {
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    border-left: 3px solid #be123c;
-    padding: 14px 18px;
-    border-radius: 0 5px 5px 0;
-    margin: 0.7em 0;
-  }
-
-  pre code {
-    background: transparent;
-    color: #111827;
-    padding: 0;
-    font-size: 0.8em;
-    font-family: 'Consolas', 'Courier New', monospace;
-    font-weight: 400;
+    margin: 0.35em 0;
   }
 
   strong {
@@ -85,58 +48,78 @@ style: |
 
   em {
     color: #6b7280;
-    font-style: italic;
+  }
+
+  code {
+    background: #f3f4f6;
+    color: #9d174d;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 0.88em;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-weight: 600;
+  }
+
+  pre {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-left: 4px solid #be123c;
+    padding: 10px 16px;
+    border-radius: 0 6px 6px 0;
+    font-size: 17px;
+    line-height: 1.3;
+    margin: 0.5em 0;
+  }
+
+  pre code {
+    background: transparent;
+    color: #111827;
+    padding: 0;
+    font-size: 1em;
+    font-weight: 400;
   }
 
   blockquote {
     background: #fff1f2;
-    border-left: 3px solid #be123c;
+    border-left: 4px solid #be123c;
     color: #4b5563;
-    padding: 10px 18px;
-    border-radius: 0 5px 5px 0;
-    margin: 0.8em 0;
+    padding: 8px 16px;
+    border-radius: 0 6px 6px 0;
+    margin: 0.7em 0;
     font-style: normal;
-    font-size: 0.93em;
+    font-size: 0.9em;
   }
 
   ul, ol {
-    padding-left: 1.4em;
-    margin: 0.3em 0;
+    padding-left: 1.3em;
+    margin: 0.25em 0;
   }
 
-  ul li, ol li {
-    margin-bottom: 0.4em;
-    line-height: 1.55;
-  }
-
-  .columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    margin-top: 0.5em;
+  li {
+    margin-bottom: 0.35em;
   }
 
   table {
-    font-size: 0.79rem;
+    font-size: 18px;
     width: 100%;
     border-collapse: collapse;
-    margin-top: 0.6em;
+    margin-top: 0.5em;
   }
 
   th {
     background: #1a1a2e;
     color: #ffffff;
-    padding: 8px 12px;
+    padding: 6px 10px;
     text-align: left;
     font-weight: 600;
-    font-size: 0.75rem;
+    font-size: 0.8em;
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
 
   td {
     background: #ffffff;
-    padding: 7px 12px;
+    padding: 6px 10px;
     border-bottom: 1px solid #e5e7eb;
     color: #374151;
     vertical-align: top;
@@ -146,252 +129,234 @@ style: |
     background: #f9fafb;
   }
 
+  .nota {
+    font-size: 0.85em;
+    color: #4b5563;
+    background: #fff1f2;
+    border-left: 4px solid #be123c;
+    padding: 8px 16px;
+    border-radius: 0 6px 6px 0;
+    margin-top: 0.8em;
+  }
+
   section.cover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
     background: #ffffff;
-    border-left: 6px solid #be123c;
-    padding-left: 72px;
+    border-top: 6px solid #be123c;
   }
 
   section.cover h1 {
-    font-size: 2.7rem;
-    color: #1a1a2e;
+    font-size: 52px;
     border: none;
     padding: 0;
-    margin-bottom: 0.2em;
-    line-height: 1.2;
+    margin-bottom: 0.15em;
+    line-height: 1.15;
   }
 
   section.cover h2 {
     color: #be123c;
-    font-size: 0.85rem;
-    letter-spacing: 0.12em;
+    font-size: 0.95rem;
+    letter-spacing: 0.14em;
     font-weight: 700;
-    margin-bottom: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
   }
 
   section.cover p {
     color: #6b7280;
     font-size: 0.95rem;
-    margin-top: 0.5em;
-  }
-
-  section.cover strong {
-    color: #1a1a2e;
   }
 ---
 
 <!-- _class: cover -->
 
-## Clube de Desenvolvimento Web — Semana 8
+## Clube de Desenvolvimento Web — Semana 9
 
-# Rust — Seguranca de Memoria sem Coletor de Lixo
+# CRUD com Bun e Docker
 
-*Variaveis, funcoes, if e tipos primitivos — rustlings 00 a 04*
-
----
-
-# Agenda
-
-1. **Por que Rust** — o problema que ele resolve, direto da Semana 7
-2. **Ferramentas** — `rustup`, `cargo` e o `rustlings`
-3. **Variaveis** — imutabilidade por padrao, `mut` e shadowing
-4. **Funcoes** — sintaxe, tipos e a diferenca entre statement e expressao
-5. **If como expressao** — a maior mudanca de mentalidade vindo de C
-6. **Tipos primitivos** — inteiros, float, bool, char, tuplas e arrays
-7. **Atividades ao vivo** — rustlings junto, ao vivo
-
-> "C confia em voce. Rust verifica voce. As duas coisas tem seu preco."
+Construindo o backend do seu blog pessoal
 
 ---
 
-# De onde viemos
+## A aula muda hoje
 
-Voces passaram a Semana 7 escrevendo isso:
+Até aqui: **8 semanas de fundamentos** — HTTP, segurança, banco de dados, API, auth, modelagem, algoritmos.
 
-```c
-No *criar_no(int valor) {
-    No *novo = malloc(sizeof(No));
-    novo->valor = valor;
-    novo->proximo = NULL;
-    return novo;
-}
+A partir de hoje: **construir**. Cada encontro entrega uma peça do seu blog pessoal.
 
-void liberar(No *atual) {
-    while (atual != NULL) {
-        No *proximo = atual->proximo;
-        free(atual);
-        atual = proximo;
-    }
-}
-```
+Hoje você sai daqui com:
 
-`malloc`, `free`, ponteiro duplo, `No **cabeca`. Voces ja sabem por que ponteiro existe e por que ele e perigoso.
+- uma **API própria** respondendo HTTP
+- rodando **dentro de um container Docker**
 
-> Hoje voces vao ver a mesma ideia — memoria, endereco, referencia — em uma linguagem que **nao deixa voce errar em silencio**.
+<div class="nota">
+Fundamento sem prática esquece. Prática sem fundamento copia.
+Agora nós temos os dois — e a aula vira oficina.
+</div>
 
 ---
 
-<!-- _class: cover -->
+## O destino: o seu blog pessoal
 
-## Parte 1
-
-# Por que Rust?
-
----
-
-# Os bugs que o C permite escrever
-
-Todos compilam. Nenhum avisa. O comportamento so aparece em producao, tarde da noite.
-
-```c
-// 1. Use-after-free — usar memoria ja liberada
-No *no = criar_no(10);
-free(no);
-printf("%d\n", no->valor);      // le memoria que ja nao e sua
-
-// 2. Double free — liberar duas vezes
-free(no);
-free(no);                       // corrompe o alocador
-
-// 3. Dangling pointer — ponteiro para algo que nao existe mais
-No *pega_ponteiro() {
-    No local = {10, NULL};
-    return &local;               // endereco de variavel que morreu
-}
-
-// 4. Buffer overflow — escrever fora dos limites do array
-int vetor[5];
-vetor[10] = 99;                  // sem checagem, sem erro, sem aviso
-```
-
-> Esses 4 bugs sao responsaveis por boa parte das falhas de seguranca criticas ja encontradas em software escrito em C e C++.
-
----
-
-# O que o Rust faz diferente
-
-Rust tem um componente no compilador chamado **borrow checker**. Ele analisa quem "possui" cada pedaco de memoria — **antes do codigo rodar**.
-
-```
-C:      compila  ->  roda  ->  talvez quebre em producao
-Rust:   nao compila se houver risco  ->  o bug nunca chega a rodar
-```
-
-```rust
-fn pega_ponteiro() -> &i32 {
-    let local = 10;
-    &local   // ERRO DE COMPILACAO:
-             // `local` sai de escopo no fim da funcao,
-             // a referencia nao pode sobreviver a ela
-}
-```
-
-O mesmo bug de "dangling pointer" que em C compila e quebra depois, em Rust **nem chega a virar binario**.
-
-> Isso e o que Rust quer dizer com "seguranca de memoria sem coletor de lixo": nao existe um processo em runtime limpando memoria (como no JavaScript) — as regras sao verificadas em tempo de compilacao, com custo zero na execucao.
-
----
-
-# Ownership — a ideia por tras de tudo
-
-Nas proximas semanas voces vao ver isso em profundidade. Por hoje, guarde a regra central:
-
-```
-Toda memoria em Rust tem exatamente UM dono.
-
-Quando o dono sai de escopo, a memoria e liberada
-automaticamente — sem voce chamar free().
-
-Quando voce passa o dono para outro lugar,
-o original perde o acesso.
-```
-
-Compare com o que voces fizeram na Semana 7:
-
-| Em C, voce fazia manualmente | Em Rust, o compilador garante |
+| Semana | Entrega |
 |---|---|
-| Chamar `free()` no lugar certo | Liberacao automatica ao sair de escopo |
-| Nao usar ponteiro apos `free()` | Impossivel — o compilador bloqueia |
-| Nao liberar duas vezes | Impossivel — so existe um dono |
-| Verificar limites do array na mao | Checagem de limites em tempo de execucao |
+| **9 — hoje** | CRUD da API em Bun, rodando no Docker |
+| 10 | O array vira banco: PostgreSQL + Prisma |
+| 11 | Frontend do blog |
+| 12 | Auth e segurança |
+| 13 | Produção: deploy e DevOps |
 
-> Ownership nao e sobre escrever menos codigo. E sobre o compilador ser seu revisor de codigo mais rigoroso, antes de qualquer usuario ver o bug.
+No caminho: **ORM, banco relacional, requisições, segurança, DevOps**.
+
+<div class="nota">
+Cada participante sai do final do ano com um blog próprio,
+feito por você, rodando em produção.
+</div>
+
+---
+
+## Agenda
+
+| Bloco | Assunto |
+|---|---|
+| 1 | O que é Bun e por que ele existe |
+| 2 | Primeiro servidor com `Bun.serve` |
+| 3 | Testes, TDD e Refactoring |
+| 4 | CRUD: as quatro operações de um blog |
+| 5 | A API dentro de um container Docker |
+
+Entre os blocos: **prática na sua máquina**, sempre.
 
 ---
 
 <!-- _class: cover -->
 
-## Parte 2
+## Bloco 1
 
-# Ferramentas
-
----
-
-# rustup e cargo
-
-**rustup** — instala e gerencia versoes do compilador Rust
-**cargo** — gerenciador de pacotes e build, equivalente ao `npm` do Node ou ao `pip` do Python
-
-```bash
-# Instalar o Rust (Linux/macOS)
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-# Verificar instalacao
-rustc --version
-cargo --version
-
-# Criar um novo projeto
-cargo new meu_projeto
-cd meu_projeto
-
-# Rodar
-cargo run
-
-# Compilar sem rodar
-cargo build
-
-# Rodar os testes
-cargo test
-```
-
-### Paralelo com Docker (Semana 3)
-
-`cargo` fixa as versoes das dependencias no `Cargo.lock`, igual `package-lock.json` no Node — o mesmo problema de "funciona na minha maquina" que o Docker resolve em outra camada.
+# O que é Bun e por que ele
 
 ---
 
-# rustlings — aprendendo com o compilador
+## O que falta para o blog existir
 
-`rustlings` e uma colecao de pequenos exercicios que **nao compilam de proposito**. Sua tarefa e consertar o codigo ate ele compilar e passar no teste.
+Na Semana 5 vocês **consumiram** uma API: o navegador pedia, alguém respondia.
+
+Quem escreve o lado que **responde**?
+
+```
+navegador  --requisicao-->  ??????  --resposta-->  navegador
+                           um programa ouvindo uma porta
+```
+
+Esse programa é o **backend** do blog. Pra escrevê-lo, precisamos de:
+
+1. uma **linguagem** — JavaScript/TypeScript, que vocês já conhecem
+2. um **runtime** — o programa que executa essa linguagem no servidor
+
+<div class="nota">
+JavaScript sozinho não roda em servidor nenhum.
+Ele precisa de um runtime — e é aí que o Bun entra.
+</div>
+
+---
+
+## O que é um runtime?
+
+JavaScript é só uma **especificação**. Quem executa o código é uma **engine**:
+
+| Engine | Quem usa |
+|---|---|
+| **V8** (Google) | Chrome, Node.js |
+| **JavaScriptCore** (Apple) | Safari, **Bun** |
+
+A engine só executa o programa. O **runtime** é a engine **+ as APIs** que o código usa para falar com o mundo externo: arquivos, rede, sistema.
+
+<div class="nota">
+Analogia: a engine é o motor. O runtime é o carro inteiro —
+motor, mais tudo o que faz o motor ser útil.
+</div>
+
+---
+
+## Mesma linguagem, mundos diferentes
+
+| Onde roda | O que o JavaScript enxerga |
+|---|---|
+| Navegador | `window`, `fetch`, DOM, `localStorage` (Semana 3) |
+| Node.js | `process`, `node:fs`, `node:http` |
+| **Bun** | as APIs Web **e** as do Node |
+
+O runtime define **qual mundo** o seu código enxerga.
+
+---
+
+## Bun em uma frase
+
+> Bun é um **kit completo** para JavaScript e TypeScript:
+> um único binário com **runtime, gerenciador de pacotes,
+> test runner e bundler**.
+
+Ele nasceu como **substituto direto do Node.js** — mais rápido e mais moderno — movido pela engine **JavaScriptCore**, a mesma do Safari.
+
+---
+
+## O que o Bun substitui
+
+| Ferramenta que você já ouviu falar | No Bun |
+|---|---|
+| `node` | `bun run` |
+| `npm` | `bun install` |
+| `jest` | `bun test` |
+| `tsc` / `tsx` (rodar TypeScript) | **não precisa — é nativo** |
+
+Quatro ferramentas, um executável só.
+
+<div class="nota">
+O Bun foi escrito em Zig e C++, sobre a engine JavaScriptCore.
+O Node roda sobre a V8. Engines diferentes, propostas iguais.
+</div>
+
+---
+
+## Por que Bun — para nós, agora
+
+1. **TypeScript sem configuração** — `.ts` roda direto. Zero build, zero `tsconfig`
+2. **Servidor HTTP nativo** — `Bun.serve` faz o trabalho do Express **sem instalar nada**
+3. **Rápido** — o processo Bun inicia ~4x mais rápido que o Node (`5.2ms` vs `25.1ms` no hello world da documentação)
+4. **Nivelamento** — todo mundo começa igual: um binário, zero dependências, um arquivo
+
+<div class="nota">
+Ponto 4 é o mais importante hoje: sem dependência instalada,
+não existe "na minha máquina não roda".
+</div>
+
+---
+
+## Instalação
 
 ```bash
-# Instalar
-cargo install rustlings
+# Linux / macOS / WSL
+curl -fsSL https://bun.sh/install | bash
 
-# Iniciar o curso na pasta atual
-rustlings init
-cd rustlings
-
-# Roda em modo "watch" — reexecuta a cada save
-rustlings watch
+# Windows (PowerShell)
+powershell -c "irm bun.sh/install.ps1 | iex"
 ```
 
-### O fluxo de cada exercicio
+Verificar:
 
-```
-1. Abra o arquivo indicado em exercises/
-2. Leia o erro do compilador com atencao — Rust explica MUITO bem
-3. Corrija o codigo
-4. Salve — rustlings roda de novo automaticamente
-5. Peça uma dica com: rustlings hint <nome_do_exercicio>
+```bash
+bun --version
 ```
 
-> Hoje vamos ate os modulos `03_if` e `04_primitive_types`. Chegar ate ali e o objetivo do encontro — o resto e desafio de casa.
+<div class="nota">
+Se o install falhar na sua máquina, levante a mão.
+O caminho alternativo é pular direto para o Docker —
+a imagem oficial do Bun já vem com ele dentro.
+</div>
 
 ---
 
@@ -399,136 +364,186 @@ rustlings watch
 
 ## Atividade 1
 
-# Primeiro contato
+# Hello world
 
 ---
 
-# Rode o ambiente
+## Prática — 5 minutos
 
-Antes de seguir, confirme que o ambiente esta pronto:
+Crie a pasta do projeto e um arquivo TypeScript:
 
 ```bash
-rustc --version      # deve mostrar uma versao instalada
-cargo --version       # idem
-rustlings             # deve listar o progresso, tudo com X vermelho
+mkdir blog-api && cd blog-api
 ```
 
-### Enquanto isso, discuta com quem esta do lado
+```ts
+// index.ts
+const nome: string = "Bun";
+console.log(`Hello via ${nome}!`);
+```
 
-- Voces ja tinham ouvido falar de Rust? Onde?
-- Alguem sabe qual empresa ou projeto famoso usa Rust hoje? (dica: navegadores, sistemas operacionais, ferramentas de linha de comando)
+Rode:
 
-> Se o ambiente nao rodar, levante a mao — resolvemos antes de continuar.
+```bash
+bun run index.ts
+```
+
+<div class="nota">
+Todo mundo rode agora. Se apareceu "Hello via Bun!",
+o TypeScript já está rodando na sua máquina.
+</div>
+
+---
+
+## O que NÃO precisou existir
+
+Repare no que foi necessário para TypeScript rodar:
+
+- nenhum `npm init`, nenhum `package.json`
+- nenhum `tsc`, nenhum `tsconfig`
+- nenhuma dependência instalada
+
+O transpiler do Bun converte `.ts` para JavaScript **na hora**, antes de executar.
+
+<div class="nota">
+Conversem com quem está do lado: quanto disso vocês
+achariam necessário antes de ver funcionar?
+</div>
 
 ---
 
 <!-- _class: cover -->
 
-## Parte 3
+## Bloco 2
 
-# Variaveis
-
----
-
-# Imutavel por padrao — a primeira surpresa
-
-Em C, toda variavel e mutavel a menos que voce escreva `const`. Em Rust, e o contrario.
-
-```rust
-fn main() {
-    let x = 5;
-    println!("O valor de x e: {}", x);
-
-    x = 6;   // ERRO DE COMPILACAO:
-             // cannot assign twice to immutable variable `x`
-}
-```
-
-```rust
-// Para permitir mudanca, seja explicito:
-fn main() {
-    let mut x = 5;
-    println!("O valor de x e: {}", x);
-
-    x = 6;   // agora compila
-    println!("Agora x e: {}", x);
-}
-```
-
-> Em C, `int x = 5;` sempre pode mudar. Em Rust, `let x = 5;` e um compromisso: "isso nunca vai mudar" — o compilador cobra esse compromisso.
+# Primeiro servidor com Bun.serve
 
 ---
 
-# Por que isso importa
+## O objetivo do bloco
 
-Nao e frescura de sintaxe. Imutabilidade por padrao previne uma classe inteira de bugs de concorrencia e de logica.
-
-```rust
-// O compilador te avisa se voce declarar mut sem precisar:
-let mut total = 0;
-println!("{}", total);
-// warning: variable does not need to be mutable
-```
+Um programa que fica **ouvindo uma porta** e responde requisições HTTP.
 
 ```
-Se a variavel nunca muda -> nao ha risco de outra parte
-do codigo (ou outra thread) alterar o valor sem voce esperar.
-
-Voce le "let mut" no codigo e imediatamente sabe:
-"esse valor vai mudar em algum lugar aqui embaixo — preste atencao."
+curl http://localhost:3000/   ->   "Blog no ar!"
 ```
 
-> Semana 4 falamos de banco de dados imutavel vs mutavel em contexto de auditoria. A mesma logica se aplica aqui: menos coisa podendo mudar = menos lugares para o bug se esconder.
+Em Node, isso pede `node:http` ou o Express.
+Em Bun, é **uma chamada só**: `Bun.serve`.
 
 ---
 
-# Shadowing — reusar o nome, nao o valor
+## O código mínimo
 
-Diferente de `mut`, shadowing cria uma **variavel nova** com o mesmo nome.
-
-```rust
-fn main() {
-    let x = 5;
-    let x = x + 1;        // nova variavel x, valor 6
-    let x = x * 2;         // nova variavel x, valor 12
-
-    println!("O valor de x e: {}", x);   // 12
-}
+```bash
+bun init        # escolha o template: Blank
 ```
 
-### Diferenca pratica entre `mut` e shadowing
+```ts
+// index.ts
+const server = Bun.serve({
+  port: 3000,
+  routes: {
+    "/": () => new Response("Blog no ar!"),
+  },
+});
 
-```rust
-let mut espacos = "   ";
-espacos = espacos.len();   // ERRO: nao pode mudar de &str para usize
-
-let espacos = "   ";
-let espacos = espacos.len(); // OK: e uma variavel nova, pode mudar de tipo
+console.log(`Ouvindo em ${server.url}`);
 ```
 
-> Shadowing permite transformar um valor passo a passo (ex: texto -> numero) sem precisar inventar `espacos_str` e `espacos_num`.
+Uma rota. Uma função. Uma `Response`.
 
 ---
 
-# Constantes
+## Rodar e testar
 
-```rust
-const LIMITE_TENTATIVAS: u32 = 3;
-const PI: f64 = 3.14159;
-
-fn main() {
-    println!("Voce tem {} tentativas", LIMITE_TENTATIVAS);
-}
+```bash
+bun run index.ts
 ```
 
-| Criterio | `let` | `let mut` | `const` |
-|---|---|---|---|
-| Pode mudar de valor | Nao | Sim | Nunca |
-| Precisa de tipo anotado | Nao (inferido) | Nao (inferido) | Sim, sempre |
-| Escopo | Bloco onde foi criada | Bloco onde foi criada | Pode ser global |
-| Calculado em tempo de execucao | Sim | Sim | Nao — so em tempo de compilacao |
+```
+Ouvindo em http://localhost:3000/
+```
 
-> Convencao: constantes em `SCREAMING_SNAKE_CASE`, variaveis em `snake_case` — o compilador nao obriga, mas o `clippy` (linter do Rust) reclama se voce nao seguir.
+Em outro terminal:
+
+```bash
+curl http://localhost:3000/
+```
+
+```
+Blog no ar!
+```
+
+<div class="nota">
+Se apareceu "Blog no ar!", sua primeira API já está no ar.
+</div>
+
+---
+
+## Response é API Web — nada novo
+
+`Bun.serve` não usa `req`/`res` como o Express. Usa **`Request` e `Response`** — os mesmos objetos do `fetch` do navegador.
+
+```ts
+new Response("texto")                        // 200 implícito
+new Response("não achei", { status: 404 })  // status explícito
+Response.json({ ok: true })                  // JSON com 200
+Response.json({ criado: true }, { status: 201 })
+```
+
+| No Express você escreveria | No Bun |
+|---|---|
+| `res.send("ok")` | `new Response("ok")` |
+| `res.status(404).json({...})` | `Response.json({...}, { status: 404 })` |
+| body parser no meio | `await req.json()` — nativo |
+
+<div class="nota">
+É o fetch que vocês conhecem, espelhado para o lado do servidor.
+</div>
+
+---
+
+## Adicionar uma rota de JSON
+
+```ts
+routes: {
+  "/": () => new Response("Blog no ar!"),
+  "/api/status": () => Response.json({
+    ok: true,
+    runtime: "bun",
+    hora: new Date().toISOString(),
+  }),
+},
+```
+
+```bash
+curl http://localhost:3000/api/status
+```
+
+```json
+{"ok":true,"runtime":"bun","hora":"2026-09-08T19:30:00.000Z"}
+```
+
+---
+
+## --watch e --hot: o servidor se atualiza sozinho
+
+```bash
+bun --watch index.ts   # reinicia o PROCESSO a cada alteração
+bun --hot   index.ts   # troca o CÓDIGO sem derrubar o servidor
+```
+
+| | `--watch` | `--hot` |
+|---|---|---|
+| Como recarrega | reinicia tudo | soft reload, mesmo processo |
+| Estado em memória | perde | **mantém** |
+| Uso típico | testes | **servidor em desenvolvimento** |
+
+<div class="nota">
+Hoje, rodem com <code>bun --hot index.ts</code>:
+salvaram o arquivo, a resposta muda — a porta 3000 nunca cai.
+</div>
 
 ---
 
@@ -536,115 +551,258 @@ fn main() {
 
 ## Atividade 2
 
-# Corrija o rustlings — variables
+# Suas próprias rotas
 
 ---
 
-# `exercises/01_variables`
+## Prática — 10 minutos
 
-Va ate o rustlings e resolva, na ordem, `variables1.rs` ate `variables6.rs`.
+Adicione ao objeto `routes`:
 
-```
-variables1.rs  ->  falta um `let`
-variables2.rs  ->  tipo incompativel na comparacao
-variables3.rs  ->  falta `mut`
-variables4.rs  ->  mudou de tipo — precisa de shadowing, nao de mut
-variables5.rs  ->  shadowing dentro de um bloco { }
-variables6.rs  ->  constante sem tipo anotado
-```
+1. `/api/sobre` — JSON com seu nome e uma frase sua
+2. `/api/hora` — a hora atual com `new Date().toISOString()`
 
-### Antes de rodar de novo, leia o erro
+Com o `--hot` rodando, **salve o arquivo** e teste sem reiniciar nada:
 
-```
-error[E0384]: cannot assign twice to immutable variable `x`
-  --> exercises/01_variables/variables1.rs:6:5
-   |
-5  |     let x: i32 = 1;
-   |         - first assignment to `x`
-6  |     x = 2;
-   |     ^^^^^ cannot assign twice to immutable variable
-   |
-help: consider making this binding mutable: `mut x`
+```bash
+curl http://localhost:3000/api/sobre
 ```
 
-> Rust nao so fala que esta errado — ele sugere a correcao. Leia antes de adivinhar.
+Enquanto isso, discutam:
+
+- o que acontece com uma rota que **não existe**?
+- qual status code seria o correto aí?
+
+<div class="nota">
+O 404 vira código daqui a pouco — no CRUD.
+</div>
 
 ---
 
 <!-- _class: cover -->
 
-## Parte 4
+## Bloco 3
 
-# Funcoes
-
----
-
-# Sintaxe basica
-
-```rust
-fn soma(a: i32, b: i32) -> i32 {
-    a + b     // sem `return` e sem `;` -> isso e o valor devolvido
-}
-
-fn saudacao(nome: &str) {
-    println!("Ola, {}!", nome);   // sem retorno -> devolve () implicito
-}
-
-fn main() {
-    let resultado = soma(3, 4);
-    println!("{}", resultado);   // 7
-
-    saudacao("Vitor");
-}
-```
-
-### Comparando com C
-
-```c
-int soma(int a, int b) {
-    return a + b;     // return e ; sao obrigatorios
-}
-```
-
-```
-C:     tipo de retorno vem ANTES do nome:      int soma(...)
-Rust:  tipo de retorno vem DEPOIS, com seta:    fn soma(...) -> i32
-```
-
-> Em Rust, todo parametro **exige** o tipo declarado — sem isso o compilador nao aceita. Nao existe parametro "generico por padrao" como em JavaScript.
+# Testes, TDD e Refactoring
 
 ---
 
-# Statement vs Expression — a distincao que muda tudo
+## Um bug para começar a conversa
 
-Essa e a base para entender o `if` da proxima parte.
+Imagine que a Semana 10 chega, o array vira Postgres, e **metade das rotas para de funcionar**.
+
+Sem testes, você descobre isso **abrindo o curl e testando tudo na mão**, uma rota por uma, depois de cada mudança.
+
+Com testes:
 
 ```
-Statement (comando)  ->  executa uma acao, nao produz valor
-Expression (expressao) ->  avalia e RESULTA em um valor
+bun test
 ```
 
-```rust
-fn main() {
-    let y = {          // este bloco inteiro e uma expressao
-        let x = 3;
-        x + 1           // sem ; -> e o valor que o bloco "retorna"
-    };
-
-    println!("{}", y);  // 4
-}
+```
+ 5 pass
+ 2 fail       <- as duas que quebraram, em 50ms
 ```
 
-```rust
-// Se voce colocar ; no fim, vira statement e passa a valer ()
-let y = {
-    let x = 3;
-    x + 1;    // <- esse ; transforma a expressao em statement
-};
-// y agora e (), nao 4. Erro de tipo em tempo de compilacao.
+<div class="nota">
+Teste automatizado é um revisor de código que roda
+toda a sua API em segundos, quantas vezes quiser, de graça.
+</div>
+
+---
+
+## O Bun já traz o test runner
+
+Lembra do "kit completo, um binário só"? Isso inclui os testes:
+
+- test runner **nativo** — nada de instalar o Jest
+- compatível com a API do Jest (`test`, `expect`)
+- TypeScript direto, sem configuração
+
+```bash
+bun test                # roda todos os testes
+bun test --watch        # reexecuta a cada save
 ```
 
-> `;` no fim de uma linha em Rust nao e so estetica — ele muda se a linha **produz** um valor ou nao. Esse detalhe explode em erro de compilacao com muita frequencia no comeco.
+O runner procura automaticamente arquivos chamados **`*.test.ts`**.
+
+---
+
+## O primeiro teste, ao vivo
+
+```ts
+// soma.test.ts
+import { expect, test } from "bun:test";
+
+test("2 + 2", () => {
+  expect(2 + 2).toBe(4);
+});
+```
+
+```bash
+bun test
+```
+
+```
+✓ soma.test.ts:
+✓ 2 + 2 [0.03ms]
+
+ 1 pass
+ 0 fail
+```
+
+<div class="nota">
+A saída verde é o som que vocês vão ouvir o resto do semestre.
+</div>
+
+---
+
+## test e expect — a anatomia
+
+```ts
+test("cria um post com id", () => {
+  //      ^ nome: o que o teste garante
+  expect(criarPost("titulo")).toBe(42);
+  // ^ expect(valor).afirmacao(valorEsperado)
+});
+```
+
+| Peça | Papel |
+|---|---|
+| `test(nome, fn)` | um caso: "isso deveria acontecer" |
+| `expect(x)` | pega um valor para afirmar algo sobre ele |
+| `.toBe(y)` | afirmação: igual a `y` |
+| `.toEqual(y)` | igualdade **profunda** — para objetos e arrays |
+
+<div class="nota">
+Nomes importam: o nome do teste é a descrição do que quebrou
+quando ele falha. "deveria rejeitar post sem título" > "teste 3".
+</div>
+
+---
+
+## O que TDD significa
+
+**TDD = Test-Driven Development.** Desenvolvimento guiado por testes.
+
+A ordem tradicional:
+
+```
+1. escrever o código
+2. escrever o teste
+3. rodar e torcer
+```
+
+A ordem do TDD — **invertida**:
+
+```
+1. escrever o teste        (para um código que não existe)
+2. rodar -> FALHA          (vermelho — e falhar é o objetivo)
+3. escrever o código
+4. rodar -> PASSA          (verde)
+5. refatorar, rodando de novo
+```
+
+<div class="nota">
+Parece ao contrário. É ao contrário — de propósito.
+O teste é a primeira especificação do que o código deve fazer.
+</div>
+
+---
+
+## Vermelho -> Verde -> Refatora
+
+O ciclo do TDD tem nome: **Red, Green, Refactor**.
+
+```
+   1. RED       escreva o TESTE e o veja FALHAR
+                (o código ainda não existe)
+
+   2. GREEN     escreva o código MÍNIMO para passar
+
+   3. REFACTOR  melhore o design — o teste protege
+
+        ^______ volta ao 1 (próximo teste)
+```
+
+<div class="nota">
+Um ciclo por vez, passos pequenos.
+Nunca dois ciclos sem rodar os testes.
+</div>
+
+---
+
+## Por que codar assim
+
+1. **o teste falha primeiro** — você vê o teste falhar e depois passar; se ele falhar por outro motivo depois, você percebe
+2. **código nascido testável** — código escrito para ser testado é mais simples, mais isolado, menos engessado
+3. **a especificação virou executável** — o que o código deve fazer está escrito no teste, não num comentário
+4. **coragem pra mudar** — o teste avisa na hora se a mudança quebrou algo
+
+<div class="nota">
+Ponto 4 é o que nos permite chegar na Semana 13:
+trocar banco, refazer rota, mexer em tudo — sem medo.
+</div>
+
+---
+
+## Refactoring — a palavra de Martin Fowler
+
+> "**Refatorar**: mudar a estrutura interna do software
+> **sem mudar o comportamento externo**,
+> para deixá-lo mais fácil de entender e mais barato de modificar."
+
+Refactoring **não é** reescrever, **não é** otimizar, **não é** corrigir bug.
+
+É: o código funciona, mas está feio/confuso/duplicado — você melhora a forma, **e o comportamento continua idêntico**.
+
+<div class="nota">
+Como você prova que o comportamento não mudou?
+Os testes continuam verdes. É isso que eles garantem.
+</div>
+
+---
+
+## Como o teste protege o refactoring
+
+Sem teste, refatorar é fé:
+
+```
+mexi num arquivo ... o resto ainda funciona?  acho que sim?
+```
+
+Com teste:
+
+```
+refatorou -> bun test -> 12 pass  -> garantido, nada quebrou
+```
+
+<div class="nota">
+No TDD, refatorar é seguro porque os testes são a rede de segurança:
+se a estrutura interna mudar e um comportamento quebrar,
+o teste falha na hora — e diz qual quebrou.
+</div>
+
+---
+
+## TDD na prática — o que vamos fazer
+
+Vamos aplicar o ciclo em uma função **pura**, antes das rotas:
+
+1. a lógica dos posts (`criar`, `buscar`, `atualizar`, `remover`) vive em funções separadas, testáveis
+2. as rotas do CRUD ficam finas: chamam a lógica e devolvem a `Response`
+3. **a lógica nasce por TDD**; as rotas vocês testam com `curl` (por hoje)
+
+```
+index.ts          ->  rotas (HTTP)          -> teste com curl
+posts.ts          ->  lógica (regras)       -> teste com bun test
+```
+
+<div class="nota">
+Essa separação é o primeiro design de verdade do blog.
+E é ela que permite trocar o array pelo Prisma na
+Semana 10 sem tocar nas rotas.
+</div>
 
 ---
 
@@ -652,140 +810,511 @@ let y = {
 
 ## Atividade 3
 
-# Corrija o rustlings — functions
+# O ciclo RED -> GREEN, ao vivo
 
 ---
 
-# `exercises/02_functions`
+## Prática — 10 minutos, em dupla
 
-Resolva `functions1.rs` ate `functions5.rs`.
+**Passo 1 — RED.** Crie `posts.ts` (vazio por enquanto) e escreva o teste primeiro:
 
+```ts
+// posts.test.ts
+import { expect, test } from "bun:test";
+import { criarPost } from "./posts";
+
+test("criarPost devolve um post com id e criadoEm", () => {
+  const post = criarPost("Meu primeiro post", "Olá, mundo!");
+
+  expect(post.titulo).toBe("Meu primeiro post");
+  expect(post.id).toBeTruthy();       // existe e não é vazio
+  expect(post.criadoEm).toBeTruthy();
+});
 ```
-functions1.rs  ->  chamando uma funcao que nao existe ainda
-functions2.rs  ->  tipo do parametro errado na chamada
-functions3.rs  ->  falta declarar o tipo do parametro
-functions4.rs  ->  falta declarar o tipo de retorno com ->
-functions5.rs  ->  ; sobrando no fim, que transforma expression em statement
-```
 
-### Pergunta para discutir em grupo antes de seguir
+Rode: `bun test` — **precisa falhar.** Esse é o RED.
 
-Nesse trecho, qual e o valor de `resultado` e por que?
+<div class="nota">
+Se o teste passa antes do código existir,
+o teste está testando nada. RED é obrigatório.
+</div>
 
-```rust
-fn calcula(x: i32) -> i32 {
-    let y = x * 2;
-    y + 1;
+---
+
+## Passo 2 — GREEN
+
+Agora, o **mínimo** para o teste passar:
+
+```ts
+// posts.ts
+type Post = {
+  id: string;
+  titulo: string;
+  conteudo: string;
+  criadoEm: string;
+};
+
+export function criarPost(titulo: string, conteudo: string): Post {
+  return {
+    id: crypto.randomUUID(),
+    titulo, conteudo,
+    criadoEm: new Date().toISOString(),
+  };
 }
 ```
 
-> Dica: procure o `;` que nao deveria estar ali.
+---
+
+## Passo 2 — GREEN (continuação)
+
+```bash
+bun test
+```
+
+```
+✓ criarPost devolve um post com id e criadoEm
+
+ 1 pass
+```
+
+<div class="nota">
+MÍNIMO mesmo. Não antecipe o que o próximo teste
+ainda não pediu — a regra é deixar o teste guiar.
+</div>
+
+---
+
+## Passo 3 — REFACTOR
+
+O teste está verde — agora é a hora segura de melhorar.
+
+Exemplo: o `type Post` vive no `posts.ts`, mas o CRUD inteiro vai usar.
+Mova-o para `types.ts` e atualize o `import`:
+
+```ts
+// types.ts
+export type Post = {
+  id: string;
+  titulo: string;
+  conteudo: string;
+  criadoEm: string;
+};
+```
+
+```bash
+bun test      # ainda verde? o refactor é seguro.
+```
+
+<div class="nota">
+Estrutura mudou, comportamento não — e o teste
+acaba de provar isso em 50ms. Esse é o refactoring de Fowler:
+protegido por teste.
+</div>
 
 ---
 
 <!-- _class: cover -->
 
-## Parte 5
+## Bloco 4
 
-# If como Expressao
+# CRUD — as quatro operações de um blog
 
 ---
 
-# If sem parenteses, com chaves obrigatorias
+## O que é um CRUD
 
-```rust
-fn main() {
-    let numero = 6;
+Toda aplicação com dados se resume a quatro operações:
 
-    if numero % 4 == 0 {
-        println!("divisivel por 4");
-    } else if numero % 3 == 0 {
-        println!("divisivel por 3");
-    } else {
-        println!("nenhum dos dois");
+| Operação | Significa | No blog |
+|---|---|---|
+| **C**reate | criar | publicar um post |
+| **R**ead | ler | listar / abrir posts |
+| **U**pdate | editar | corrigir um post |
+| **D**elete | apagar | remover um post |
+
+Semana 5: **o recurso é o substantivo, o método HTTP é o verbo.**
+
+Hoje isso vira código.
+
+---
+
+## As rotas REST do blog
+
+| Método | Rota | Ação |
+|---|---|---|
+| `POST` | `/api/posts` | criar um post |
+| `GET` | `/api/posts` | listar todos |
+| `GET` | `/api/posts/:id` | abrir um post |
+| `PUT` | `/api/posts/:id` | editar um post |
+| `DELETE` | `/api/posts/:id` | apagar um post |
+
+Mesmo recurso (`posts`), cinco operações — diferenciadas **pelo método e pelo `:id`**.
+
+---
+
+## Antes de codar: modelar (Semana 7)
+
+Um post do blog, antes de existir código, é:
+
+```ts
+type Post = {
+  id: string;
+  titulo: string;
+  conteudo: string;
+  criadoEm: string;
+};
+```
+
+É isso que a Semana 7 ensinou: **desenhar o que construir, antes de construir**.
+
+---
+
+## O "banco de dados" de hoje
+
+```ts
+const posts: Post[] = [];
+```
+
+Um array **em memória**. É o nosso banco provisório.
+
+```
+hoje:            array em memória     (reinicia, morre)
+próxima semana:  PostgreSQL + Prisma  (reinicia, sobrevive)
+```
+
+<div class="nota">
+O design das rotas NÃO muda quando o banco chegar.
+Só a fonte de dados muda. É exatamente por isso
+que separamos lógica (posts.ts) de rotas (index.ts) —
+e que os testes vão provar isso na hora.
+</div>
+
+---
+
+## O CRUD agora nasce por TDD
+
+Cada operação da lógica, **um ciclo RED -> GREEN -> REFACTOR**:
+
+| Ciclo | Teste que nasce primeiro (RED) | Código mínimo (GREEN) |
+|---|---|---|
+| 1 | `listarPosts` devolve o que existe | `posts` vazio -> `[]` |
+| 2 | `buscarPostPorId` acha pelo id | `posts.find(...)` |
+| 3 | `buscarPostPorId` com id inventado -> `undefined` | idem (sem if!) |
+| 4 | `atualizarPost` muda o título e mantém o resto | `??` preserva campos |
+| 5 | `removerPost` tira do array | `posts.splice(...)` |
+
+<div class="nota">
+Ciclo 3 é o espírito do TDD: escreva o teste do
+caso "não encontrado" ANTES de existir o if que o trata.
+</div>
+
+---
+
+## A lógica completa nasce dos testes
+
+Depois dos 5 ciclos, `posts.ts` fica assim — cada linha existe porque um teste pediu:
+
+```ts
+import type { Post } from "./types";
+
+const posts: Post[] = [];
+
+export function criarPost(titulo: string, conteudo: string): Post {
+  const novo = { id: crypto.randomUUID(), titulo, conteudo,
+                 criadoEm: new Date().toISOString() };
+  posts.push(novo);
+  return novo;
+}
+```
+
+---
+
+## A lógica completa (continuação)
+
+```ts
+export function listarPosts(): Post[] {
+  return posts;
+}
+
+export function buscarPostPorId(id: string): Post | undefined {
+  return posts.find((p) => p.id === id);
+}
+```
+
+`atualizarPost` e `removerPost`: completar nos ciclos 4 e 5.
+
+```bash
+bun test   # 5 pass — a lógica está pronta e provada
+```
+
+---
+
+## Sintaxe nova: handlers por método
+
+No `routes`, uma mesma URL aceita um objeto **por método HTTP**:
+
+```ts
+routes: {
+  "/api/posts": {
+    GET:  () => Response.json(posts),
+    POST: async (req) => { /* criar */ },
+  },
+},
+```
+
+```
+GET  /api/posts   ->  roda o GET
+POST /api/posts   ->  roda o POST
+```
+
+REST literal: a URL decide **o recurso**, o método decide **a operação**.
+
+---
+
+## CREATE — o POST por dentro
+
+Com a lógica já testada, a rota fica **fina**: lê o corpo, chama a função, devolve a resposta.
+
+```ts
+POST: async (req) => {
+  const body = await req.json();
+  const novo = criarPost(body.titulo, body.conteudo);
+
+  return Response.json(novo, { status: 201 });
+},
+```
+
+| Passo | O que faz |
+|---|---|
+| `await req.json()` | lê o corpo da requisição — nativo, sem parser |
+| `criarPost(...)` | a lógica — **já testada pelo `bun test`** |
+| `status: 201` | **Created** — não é 200, é mais específico |
+
+<div class="nota">
+Compare com a versão anterior: a rota não sabe mais
+como um post é criado — só chama quem sabe.
+Rotas finas, lógica testada.
+</div>
+
+---
+
+## Testar o CREATE
+
+```bash
+curl -X POST http://localhost:3000/api/posts \
+  -H "Content-Type: application/json" \
+  -d '{"titulo": "Meu primeiro post", "conteudo": "Olá, mundo!"}'
+```
+
+```json
+{
+  "id": "3f8c1d2a-9b04-4e33-a1c7-2d5b7e9f0a11",
+  "titulo": "Meu primeiro post",
+  "conteudo": "Olá, mundo!",
+  "criadoEm": "2026-09-08T19:42:10.000Z"
+}
+```
+
+O servidor devolveu o post **completo** — com o `id` que ele gerou.
+
+---
+
+## READ — listar todos
+
+```ts
+GET: () => Response.json(listarPosts()),
+```
+
+A rota inteira é **uma linha** — porque a lógica já existe e já está testada.
+
+```bash
+curl http://localhost:3000/api/posts
+```
+
+```json
+[
+  {
+    "id": "3f8c1d2a-...",
+    "titulo": "Meu primeiro post",
+    "criadoEm": "2026-09-08T19:42:10.000Z"
+  }
+]
+```
+
+---
+
+## Rotas dinâmicas — o `:id`
+
+E se quisermos **um** post específico? Não dá para escrever uma rota por post.
+
+```ts
+"/api/posts/:id": (req) => {
+  const post = buscarPostPorId(req.params.id);
+  // ...
+},
+```
+
+- `:id` é um **coringa**: casa com qualquer valor naquela posição
+- `req.params.id` entrega o valor **já extraído**
+- a busca é a função `buscarPostPorId` — já testada nos ciclos 2 e 3
+
+```
+/api/posts/3f8c...   ->   req.params.id === "3f8c..."
+```
+
+---
+
+## READ de um — com o 404 no lugar dele
+
+```ts
+"/api/posts/:id": (req) => {
+  const post = buscarPostPorId(req.params.id);
+
+  if (!post) {
+    return Response.json(
+      { erro: "post não encontrado" },
+      { status: 404 },
+    );
+  }
+
+  return Response.json(post);
+},
+```
+
+Semana 5, agora em código: **404 = o recurso existe, mas não com esse id**.
+
+<div class="nota">
+O comportamento "id inventado -> undefined" foi definido
+no TESTE do ciclo 3 — antes de existir este if. A rota
+só traduz undefined para o status code certo.
+</div>
+
+---
+
+## Testar: o mesmo endpoint, dois finais
+
+```bash
+curl http://localhost:3000/api/posts/3f8c1d2a-9b04...
+```
+
+```json
+{"id": "3f8c1d2a-...", "titulo": "Meu primeiro post", ...}
+```
+
+```bash
+curl http://localhost:3000/api/posts/id-inventado
+```
+
+```json
+{"erro": "post não encontrado"}
+```
+
+<div class="nota">
+Faça os dois na sua máquina.
+O segundo também está certo — ele conta a história de "não existe".
+</div>
+
+---
+
+## UPDATE — a rota fica fina
+
+Regra da rota fina: a rota **traduz HTTP**, a lógica **decide**.
+
+```ts
+PUT: async (req) => {
+  const post = buscarPostPorId(req.params.id);
+  if (!post) {
+    return Response.json({ erro: "não encontrado" }, { status: 404 });
+  }
+
+  const body = await req.json();
+  const atualizado = atualizarPost(post, body.titulo, body.conteudo);
+
+  return Response.json(atualizado);
+},
+```
+
+---
+
+## UPDATE — a lógica (nascida no ciclo 4)
+
+Em `posts.ts`:
+
+```ts
+export function atualizarPost(
+  post: Post, titulo?: string, conteudo?: string
+): Post {
+  post.titulo = titulo ?? post.titulo;
+  post.conteudo = conteudo ?? post.conteudo;
+  return post;
+}
+```
+
+<div class="nota">
+O <code>??</code> — "se veio, usa; senão, mantém" —
+fica na lógica, onde o teste do ciclo 4 protege ele.
+</div>
+
+---
+
+## Testar o UPDATE
+
+```bash
+curl -X PUT http://localhost:3000/api/posts/3f8c1d2a-9b04... \
+  -H "Content-Type: application/json" \
+  -d '{"titulo": "Título editado"}'
+```
+
+```json
+{
+  "id": "3f8c1d2a-...",
+  "titulo": "Título editado",
+  "conteudo": "Olá, mundo!",
+  "criadoEm": "2026-09-08T19:42:10.000Z"
+}
+```
+
+O `conteudo` veio junto — porque o `??` manteve o que não foi enviado.
+
+---
+
+## DELETE — a rota
+
+```ts
+  DELETE: (req) => {
+    const ok = removerPost(req.params.id);
+
+    if (!ok) {
+      return Response.json({ erro: "não encontrado" }, { status: 404 });
     }
-}
+
+    return new Response(null, { status: 204 });
+  },
+},
 ```
 
-```c
-// C — parenteses obrigatorios, chaves opcionais (perigoso)
-if (numero % 4 == 0)
-    printf("divisivel por 4\n");
-```
-
-```
-C:     if (condicao) { ... }     parenteses SIM, chaves opcional
-Rust:  if condicao { ... }        parenteses NAO, chaves SEMPRE
-```
-
-> Chaves obrigatorias eliminam uma classe classica de bug em C: o famoso "dangling else", onde um `if` sem chaves so controla a proxima linha e voce jura que controlava o bloco inteiro.
+**204 No Content** — "deu certo, e não há corpo para devolver".
 
 ---
 
-# A condicao TEM que ser bool
+## DELETE — a lógica (nascida no ciclo 5)
 
-Essa e a mudanca mais brusca vindo de C.
+Em `posts.ts`:
 
-```c
-// C — qualquer inteiro diferente de zero e "verdadeiro"
-int numero = 3;
-if (numero) {
-    printf("verdadeiro\n");   // compila e roda — numero=3 e truthy
+```ts
+export function removerPost(id: string): boolean {
+  const index = posts.findIndex((p) => p.id === id);
+  if (index === -1) return false;
+  posts.splice(index, 1);
+  return true;
 }
 ```
 
-```rust
-// Rust — NAO EXISTE conversao automatica de numero para bool
-let numero = 3;
-if numero {
-    println!("verdadeiro");
-}
-// ERRO DE COMPILACAO:
-// expected `bool`, found integer
-```
-
-```rust
-// A forma correta em Rust: seja explicito
-let numero = 3;
-if numero != 0 {
-    println!("verdadeiro");
-}
-```
-
-> Em C, `if (x = 5)` (atribuicao em vez de comparacao) compila, roda e vira um bug classico de producao. Em Rust isso e impossivel: uma atribuicao nao e um `bool`, o compilador rejeita antes de voce rodar uma unica vez.
-
----
-
-# If como expressao — atribuindo o resultado
-
-Como todo bloco `{ }` pode ser uma expressao, `if` pode ser usado direto em um `let`.
-
-```rust
-fn main() {
-    let condicao = true;
-    let numero = if condicao { 5 } else { 6 };
-
-    println!("O valor de numero e: {}", numero);
-}
-```
-
-### A regra que o compilador cobra: os dois ramos precisam devolver o MESMO tipo
-
-```rust
-let numero = if condicao { 5 } else { "seis" };
-// ERRO DE COMPILACAO:
-// `if` and `else` have incompatible types
-// expected integer, found `&str`
-```
-
-```c
-// Em C, o equivalente seria o operador ternario:
-int numero = condicao ? 5 : 6;
-// C tambem exige tipos compativeis aqui — mas so nesse operador especifico.
-// Rust generaliza essa ideia para QUALQUER bloco { }.
-```
-
-> Isso conecta direto com Big O da Semana 7: o compilador precisa saber, em tempo de compilacao, exatamente quanto espaco `numero` ocupa. Se os ramos tivessem tipos diferentes, o tamanho em memoria seria imprevisivel.
+<div class="nota">
+Status code também é linguagem:
+<b>201</b> criei, <b>200</b> aqui está, <b>204</b> fiz e não devolvo nada,
+<b>404</b> não existe. Quem consome sua API entende sem ler nada.
+</div>
 
 ---
 
@@ -793,36 +1322,239 @@ int numero = condicao ? 5 : 6;
 
 ## Atividade 4
 
-# Preveja o erro
+# O CRUD inteiro, na mão
 
 ---
 
-# Esses trechos compilam?
+## Prática — 15 minutos
 
-Para cada um, decida: **compila** ou **erro de compilacao**? Se der erro, qual e a mensagem provavel?
+Complete os ciclos 4 e 5 (atualizar e remover) em dupla, **test-first**:
+escreva o teste, veja falhar, escreva o mínimo para passar.
 
-```rust
-// A
-let x = 5;
-if x { println!("ok"); }
+```ts
+// ciclos 4 e 5 — posts.test.ts
+test("atualizarPost muda o titulo e mantém o resto", () => { ... });
 
-// B
-let y = if true { 10 } else { 20 };
-
-// C
-let z = if true { 10 } else { "vinte" };
-
-// D
-let mut contador = 0;
-if contador == 0 {
-    contador = 1;
-}
-
-// E
-let resultado = if contador > 0 { "positivo" } else { "zero ou negativo" };
+test("removerPost devolve true e remove do array", () => { ... });
 ```
 
-> Depois de decidir em grupo, rode no rustlings ou em https://play.rust-lang.org e confira.
+Só depois de `bun test` verde, teste as rotas com `curl`.
+
+---
+
+## Prática — os comandos do CRUD
+
+```bash
+# CREATE
+curl -X POST http://localhost:3000/api/posts \
+  -H "Content-Type: application/json" \
+  -d '{"titulo": "Meu primeiro post", "conteudo": "Olá!"}'
+
+# READ (lista e um)
+curl http://localhost:3000/api/posts
+curl http://localhost:3000/api/posts/<id-do-post>
+```
+
+```bash
+# UPDATE
+curl -X PUT http://localhost:3000/api/posts/<id> \
+  -H "Content-Type: application/json" \
+  -d '{"titulo": "Título editado"}'
+
+# DELETE
+curl -X DELETE http://localhost:3000/api/posts/<id>
+```
+
+---
+
+## Checklist de status codes
+
+```
+POST   -> 201
+GET lista -> 200
+GET um  -> 200 ou 404
+PUT    -> 200 ou 404
+DELETE -> 204 ou 404
+```
+
+Depois, **teste os erros de propósito**:
+
+- POST sem `titulo` — sua API deixa criar? Deveria?
+- GET com id inventado — responde 404 bonito?
+
+<div class="nota">
+API boa não é só a que funciona com entrada certa.
+É a que se comporta bem com entrada errada.
+E amanhã, quando alguém refatorar algo, é a que
+o <code>bun test</code> continua verde.
+</div>
+
+---
+
+<!-- _class: cover -->
+
+## Bloco 5
+
+# A API dentro de um container
+
+---
+
+## Por que container — de novo, e agora a sério
+
+Semana 3: o problema do "na minha máquina funciona".
+
+Hoje ele ganha um papel novo — o blog de vocês vai para **produção** na Semana 13:
+
+```
+sua máquina:     Bun instalado via curl      -> funciona
+colega:          sem Bun, só Docker          -> funciona igual
+servidor:        não tem Bun, tem Docker    -> funciona igual
+```
+
+<div class="nota">
+Quem sobe em container não precisa de
+"instalação no servidor" — nunca.
+</div>
+
+---
+
+## A imagem oficial do Bun
+
+O Bun mantém uma imagem Docker pública, no Docker Hub:
+
+```bash
+docker pull oven/bun:1
+```
+
+- `oven/bun` — imagem oficial, da equipe do Bun
+- `1` — a versão major do Bun (mesma lógica do `node:lts` da Semana 3)
+
+Ela já vem com **o binário `bun` inteiro** dentro: runtime, transpiler, tudo.
+
+<div class="nota">
+Analogia da oficina continua valendo: a imagem base é a
+massa de pizza pronta. Nós só colocamos o recheio —
+que hoje é um único arquivo.
+</div>
+
+---
+
+## O Dockerfile inteiro
+
+```dockerfile
+FROM oven/bun:1
+
+WORKDIR /usr/src/app
+
+COPY index.ts posts.ts types.ts ./
+
+USER bun
+EXPOSE 3000/tcp
+ENTRYPOINT ["bun", "run", "index.ts"]
+```
+
+Nove linhas — e os testes **não entram na imagem** (`.dockerignore` cuida disso, adiante). Vamos ler uma por uma.
+
+---
+
+## FROM e WORKDIR
+
+```dockerfile
+FROM oven/bun:1
+
+WORKDIR /usr/src/app
+```
+
+**`FROM`** — a base: um sistema com o Bun pronto.
+Você não começa do zero, começa de algo que já funciona.
+
+**`WORKDIR`** — o diretório de trabalho dentro da imagem.
+Cria se não existir; tudo o que vier depois roda a partir dele.
+Equivale a um `cd` que fica valendo daqui em diante.
+
+---
+
+## COPY — o momento em que o código entra
+
+```dockerfile
+COPY index.ts posts.ts types.ts ./
+```
+
+Copia do **seu computador** para dentro da **imagem**.
+
+- origem: seus arquivos, relativo à pasta onde roda o `docker build` (o **contexto de build**)
+- destino: `./` — que aqui é `/usr/src/app`, por causa do `WORKDIR`
+
+<div class="nota">
+Lembre da oficina: o código não fica "no Dockerfile".
+O Dockerfile só tem instruções — e o COPY é a instrução
+que traz o código para dentro.
+</div>
+
+---
+
+## USER, EXPOSE e ENTRYPOINT
+
+```dockerfile
+USER bun
+EXPOSE 3000/tcp
+ENTRYPOINT ["bun", "run", "index.ts"]
+```
+
+**`USER bun`** — roda como usuário sem privilégios. A imagem tem um usuário `bun` pronto; usá-lo é segurança básica (Semana 12 aprofunda).
+
+**`EXPOSE 3000/tcp`** — **documenta** a porta. Não abre nada; quem abre é o `-p` no `docker run`.
+
+**`ENTRYPOINT`** — o processo principal. Enquanto ele viver, o container vive.
+
+---
+
+## Um detalhe que o Bun já resolve por nós
+
+O erro nº 1 da oficina: servidor ouvindo em `localhost` **dentro do container** — ninguém de fora alcança.
+
+```js
+// Node clássico — o container sobe, a porta não responde
+server.listen(3000, "localhost");
+```
+
+```ts
+// Bun — o padrão do Bun.serve é 0.0.0.0
+Bun.serve({ port: 3000, routes: { /* ... */ } });  // nasce certo
+```
+
+`0.0.0.0` = "aceite conexões de qualquer interface".
+
+<div class="nota">
+O Bun escolheu o padrão certo para servidores.
+Quem usa Node é que precisa lembrar disso manualmente.
+</div>
+
+---
+
+## .dockerignore
+
+```
+node_modules
+*.test.ts
+Dockerfile*
+docker-compose*
+.dockerignore
+.git
+.gitignore
+README.md
+.env
+```
+
+Mesma sintaxe do `.gitignore` (Semana 2): o que **não** entra no contexto de build.
+
+- build leve e rápido — testes rodam no desenvolvimento, não em produção
+- **`.env` nunca vai para dentro da imagem** — segredo não se empacota
+
+<div class="nota">
+Semana 12 volta nesse ponto. Por enquanto, fica o hábito:
+arquivo de segredo fora do container.
+</div>
 
 ---
 
@@ -830,238 +1562,116 @@ let resultado = if contador > 0 { "positivo" } else { "zero ou negativo" };
 
 ## Atividade 5
 
-# Corrija o rustlings — if
+# Build, run, logs — e uma surpresa
 
 ---
 
-# `exercises/03_if`
+## Prática — build e run
 
-Resolva `if1.rs` e `if2.rs`.
-
-```
-if1.rs  ->  os dois ramos do if precisam devolver o mesmo tipo
-if2.rs  ->  falta implementar a logica de comparacao dentro da funcao
+```bash
+docker build -t blog-api:1.0 .
 ```
 
-### Discuta em grupo antes de corrigir
-
-O `if1.rs` do rustlings tem uma funcao parecida com isso:
-
-```rust
-pub fn bigger(a: i32, b: i32) -> i32 {
-    if a > b {
-        a
-    } else {
-        b
-    }
-}
+```
+[+] Building 2.1s (10/10) FINISHED
+ => [base 1/2] FROM docker.io/library/oven/bun:1
+ => [base 2/2] WORKDIR /usr/src/app
+ => ...
+ => naming to docker.io/library/blog-api:1.0
 ```
 
-- Por que essa funcao **nao precisa** de `return`?
-- O que aconteceria se voce colocasse `;` depois de `a` no primeiro ramo?
+```bash
+docker run -d --name blog-api -p 3000:3000 blog-api:1.0
+curl http://localhost:3000/api/posts
+```
+
+Cada `[n]` do build é **uma camada** — a mesma ideia da Semana 3.
 
 ---
 
-<!-- _class: cover -->
+## Ver o que está rodando
 
-## Parte 6
+```bash
+docker ps
+```
 
-# Tipos Primitivos
+```
+CONTAINER ID   IMAGE          PORTS                    NAMES
+7f03e212a15e   blog-api:1.0   0.0.0.0:3000->3000/tcp   blog-api
+```
+
+```bash
+docker logs -f blog-api
+```
+
+```
+Ouvindo em http://localhost:3000/
+```
+
+`-f` acompanha em tempo real (`Ctrl+C` para sair).
 
 ---
 
-# Inteiros — Rust obriga voce a escolher o tamanho
+## A surpresa — onde está o meu post?
 
-Em C, `int` costuma ser 4 bytes, mas isso **depende do compilador e da plataforma**. Em Rust, o tamanho e parte do nome do tipo.
+1. Crie um post via `curl` e confirme que aparece
+2. Rode os testes — **eles continuam verdes**. Por quê?
+3. Derrube e suba o container de novo:
 
-| Tipo Rust | Tamanho | Faixa (com sinal) | Equivalente aproximado em C |
-|---|---|---|---|
-| `i8` / `u8` | 1 byte | -128 a 127 / 0 a 255 | `char` / `unsigned char` |
-| `i16` / `u16` | 2 bytes | -32.768 a 32.767 | `short` |
-| `i32` / `u32` | 4 bytes | ~-2,1bi a 2,1bi | `int` |
-| `i64` / `u64` | 8 bytes | ~-9,2 quintilhoes | `long long` |
-| `usize` / `isize` | depende da arquitetura | tamanho de um ponteiro | `size_t` |
-
-```rust
-let idade: u8 = 25;         // nunca negativo, cabe em 1 byte
-let saldo: i64 = -500_000;  // pode ser negativo, precisa de faixa grande
-let indice: usize = 0;      // usado especificamente para indexar arrays
+```bash
+docker rm -f blog-api
+docker run -d --name blog-api -p 3000:3000 blog-api:1.0
+curl http://localhost:3000/api/posts
 ```
 
-> `usize` e o tipo usado para indices de array e tamanhos — o compilador **exige** esse tipo especifico ali, nao aceita `i32` direto. Isso evita index negativo por engano, algo que em C so vira bug em tempo de execucao.
+```
+[]
+```
+
+**O post sumiu.** Mas o teste do `criarPost` passou. Por quê?
+
+<div class="nota">
+O teste garante o COMPORTAMENTO da função,
+não os DADOS em memória. Dado é problema de banco — Semana 10.
+</div>
 
 ---
 
-# Overflow — o que acontece quando estoura
+## Por que sumiu — dois motivos, mesma raiz
 
-```c
-// C — overflow silencioso, comportamento indefinido
-unsigned char x = 255;
-x = x + 1;
-printf("%d\n", x);   // imprime 0 — "deu a volta" sem avisar nada
+1. o array **vive na memória do processo** — processo novo, array vazio
+2. o container é **efêmero** — removeu o container, removeu a camada de escrita (Semana 3)
+
+```
+estado que precisa sobreviver  ->  não pode viver no processo
+                              ->  precisa viver FORA: um banco de dados
 ```
 
-```rust
-// Rust em modo debug — PANIC, o programa para imediatamente
-let x: u8 = 255;
-let y = x + 1;
-// thread 'main' panicked at 'attempt to add with overflow'
-```
-
-```rust
-// Rust em modo release (otimizado) — "da a volta" como o C, silenciosamente
-// Para controlar isso explicitamente, use metodos como:
-let x: u8 = 255;
-let y = x.wrapping_add(1);        // 0, intencional e explicito
-let y = x.checked_add(1);         // None, porque estourou
-let y = x.saturating_add(1);      // 255, trava no maximo
-```
-
-> De novo o mesmo padrao da Semana 7 com `shell=True`: C confia cegamente na entrada, Rust obriga voce a decidir explicitamente o que fazer quando algo sai do esperado.
+<div class="nota">
+Essa "falha" de hoje é a motivação inteira da Semana 10:
+o array vira PostgreSQL + Prisma, dentro e fora do container.
+</div>
 
 ---
 
-# Float, bool e char
+## O ciclo de trabalho com Docker
 
-```rust
-let preco: f64 = 19.90;      // ponto flutuante de 64 bits, padrao
-let desconto: f32 = 0.1;     // 32 bits, precisa ser explicito
+Experimento: edite o `index.ts`, de `curl` de novo — **nada mudou**.
 
-let ativo: bool = true;      // so true ou false — nunca 0 ou 1
+A imagem tem uma **cópia** do arquivo, feita no momento do `build`.
 
-let letra: char = 'A';       // SEMPRE 4 bytes, um caractere Unicode completo
-let emoji: char = '🦀';       // char em Rust aceita emoji, acento, kanji...
+```bash
+docker build -t blog-api:1.1 .
+docker rm -f blog-api
+docker run -d --name blog-api -p 3000:3000 blog-api:1.1
 ```
 
-### A diferenca de `char` para C
-
-```c
-char letra = 'A';   // em C, char e 1 BYTE — so ASCII, nao aceita 'é' direto
-```
+Agora a mudança aparece.
 
 ```
-C    char   ->  1 byte   ->  so 256 valores possiveis (ASCII estendido)
-Rust char   ->  4 bytes  ->  qualquer caractere Unicode (mais de 1 milhao)
+desenvolvimento:  bun --hot   (salvou, mudou)
+container:        editar -> build -> run
 ```
-
-> Semana 4: falamos de LGPD e dados de brasileiros. Nomes com acento (`Joao` vs `João`) sao exatamente o tipo de dado que quebra em sistemas que assumem `char` de 1 byte. Rust resolve isso no nivel do tipo primitivo.
-
----
-
-# Tuplas — agrupando tipos diferentes
-
-```rust
-fn main() {
-    let pessoa: (&str, u8, bool) = ("Joao", 25, true);
-
-    // Acesso por posicao, com ponto
-    let nome = pessoa.0;
-    let idade = pessoa.1;
-
-    // Ou destruturando de uma vez
-    let (nome, idade, ativo) = pessoa;
-
-    println!("{} tem {} anos", nome, idade);
-}
-```
-
-```rust
-// Uso comum: funcao devolvendo mais de um valor
-fn dividir(a: i32, b: i32) -> (i32, i32) {
-    (a / b, a % b)   // (quociente, resto)
-}
-
-fn main() {
-    let (q, r) = dividir(17, 5);
-    println!("quociente: {}, resto: {}", q, r);
-}
-```
-
-> Em C, para devolver dois valores voce precisava de `struct` ou de ponteiros de saida (`int *resto`). A tupla resolve o caso simples sem exigir declarar um tipo novo.
-
----
-
-# Arrays — tamanho fixo, checado em tempo de compilacao
-
-```rust
-fn main() {
-    let numeros: [i32; 5] = [1, 2, 3, 4, 5];
-    // tipo: array de 5 elementos i32 — o tamanho E PARTE DO TIPO
-
-    println!("{}", numeros[0]);   // 1
-    println!("{}", numeros[10]);  // ERRO DE COMPILACAO ou PANIC em runtime
-}
-```
-
-Compare com a Semana 7:
-
-```c
-int vetor[5] = {1, 2, 3, 4, 5};
-printf("%d\n", vetor[10]);   // COMPILA, RODA, le memoria de outra variavel
-                              // (o buffer overflow que vimos na Parte 1 de hoje)
-```
-
-```rust
-// Rust checa limites em TEMPO DE EXECUCAO quando o compilador nao pode
-// provar em tempo de compilacao (ex: indice vindo de input do usuario)
-let numeros = [1, 2, 3, 4, 5];
-let indice = 10;
-println!("{}", numeros[indice]);
-// thread 'main' panicked at 'index out of bounds: the len is 5 but the index is 10'
-```
-
-> `vetor[10]` em C e o mesmo bug de buffer overflow do inicio da aula — so que agora voces veem o antes (C, silencioso) e o depois (Rust, barulhento e imediato) lado a lado.
-
----
-
-# Array com tamanho e valor repetido
-
-```rust
-let zeros = [0; 5];          // [0, 0, 0, 0, 0]
-let tabuleiro = [0; 64];     // um tabuleiro de xadrez linear, 64 zeros
-
-// Fatiando um array (slice) — referencia para uma parte dele
-let numeros = [1, 2, 3, 4, 5];
-let meio = &numeros[1..4];   // [2, 3, 4] — sem copiar os dados
-```
-
-### Array (Rust) vs Lista Encadeada (Semana 7) — o mesmo debate, nova linguagem
-
-| Criterio | Array Rust `[T; N]` | Lista encadeada (C, Semana 7) |
-|---|---|---|
-| Memoria | Contigua, na pilha | Espalhada, no heap |
-| Acesso por indice | `O(1)`, checado | `O(n)`, sem checagem nativa |
-| Tamanho | Fixo, parte do tipo | Cresce livremente |
-| Seguranca de acesso | Panic controlado se passar do limite | Undefined behavior |
-
-> A escolha entre array e lista continua sendo sobre padrao de acesso, como na Semana 7. O que muda e que em Rust, errar o limite do array **derruba o programa de forma controlada** em vez de corromper memoria silenciosamente.
-
----
-
-<!-- _class: cover -->
-
-## Atividade 6
-
-# Corrija o rustlings — primitive_types
-
----
-
-# `exercises/04_primitive_types`
-
-Resolva `primitive_types1.rs` ate `primitive_types6.rs`.
-
-```
-primitive_types1.rs  ->  falta declarar o tipo de uma variavel
-primitive_types2.rs  ->  char precisa de aspas simples, nao duplas
-primitive_types3.rs  ->  slice de array com indices errados
-primitive_types4.rs  ->  acesso a tupla com indice errado
-primitive_types5.rs  ->  destruturacao de tupla incompleta
-primitive_types6.rs  ->  indexacao de array fora dos limites
-```
-
-### Antes de corrigir o `primitive_types6.rs`
-
-Pense: por que Rust prefere travar o programa (`panic`) a devolver um valor de memoria aleatorio como o C faz? Quem essa escolha protege — o desenvolvedor, o usuario final, ou os dois?
 
 ---
 
@@ -1069,77 +1679,78 @@ Pense: por que Rust prefere travar o programa (`panic`) a devolver um valor de m
 
 ## Recapitulando
 
-# O que vimos hoje
+---
+
+## O que vimos hoje
+
+**Bun**
+- runtime all-in-one: runtime + pacotes + testes + bundler, um binário
+- engine JavaScriptCore; TypeScript nativo, zero config
+- `Bun.serve`: rotas por método HTTP, sem framework
+
+**Testes, TDD e Refactoring**
+- `bun test` nativo, arquivos `*.test.ts`
+- TDD: RED -> GREEN -> REFACTOR — o teste nasce antes do código
+- refactoring (Fowler): muda a estrutura, mantém o comportamento — provado pelos testes verdes
+
+**CRUD e Docker**
+- POST 201, GET 200/404, PUT 200/404, DELETE 204
+- lógica testada (`posts.ts`) + rotas finas (`index.ts`)
+- `FROM oven/bun:1`, ciclo editar -> build -> run
 
 ---
 
-# Resumo
+## Erros comuns
 
-<div class="columns">
+| Sintoma | Causa provável |
+|---|---|
+| `bun: command not found` | instalação/PATH — ou use a imagem Docker |
+| Porta não responde no container | faltou `-p 3000:3000` |
+| Porta ocupada no host | outro `bun --hot` ainda rodando |
+| Teste passa sem o código existir | teste testando nada — confira o RED |
+| POST criado "sumiu" | array em memória + container recriado — esperado hoje |
+| Mudança no código não aparece | faltou o `docker build` |
+| `docker run` diz nome em uso | `docker rm` no container antigo antes |
 
-**Por que Rust**
-- Ownership resolve em tempo de compilacao o que C deixa para o programador em runtime
-- Use-after-free, double free e dangling pointer viram erro de compilacao
-- Sem coletor de lixo — o custo e verificado antes, nao pago durante a execucao
+---
 
-**Variaveis e Funcoes**
-- Imutavel por padrao — `mut` e uma decisao explicita
-- Shadowing troca o tipo sem sujar o nome da variavel
-- `;` no fim de uma linha muda expression para statement
+## Desafio da Semana 9
 
+**Iniciante** — CRUD de **tarefas** (`/api/tarefas`) com `titulo` e `feita` (boolean), **um ciclo TDD por operação**: escreva o teste, veja falhar, faça passar. Teste as rotas com `curl`.
+
+**Intermediário** — adicione validação **test-first**: escreva primeiro o teste "rejeita tarefa sem titulo" (`.toBeUndefined()` no retorno, ou o erro que decidirem), depois o código. Depois `GET /api/tarefas?busca=texto` filtrando por título — teste primeiro, claro.
+
+**Avançado** — refactor: extraia a busca e a validação para funções puras próprias (`*.ts` separados), **mantendo todos os testes verdes sem editá-los**. Depois porta via variável de ambiente: `process.env.PORT` no `Bun.serve`, `docker run -e PORT=4000 -p 4000:4000`.
+
+<div class="nota">
+Repare no desafio avançado: refactoring é MUDAR a estrutura
+e NÃO MUDAR os testes. Se você precisou editar o teste
+para o código compilar, não foi refactor — foi reescrita.
 </div>
 
 ---
 
-# Resumo (continuacao)
+## Próxima semana
 
-<div class="columns">
+O array vira banco de verdade:
 
-**If como Expressao**
-- Condicao precisa ser `bool` — nada de inteiro "truthy"
-- Chaves obrigatorias eliminam o bug do dangling else
-- Os dois ramos do `if` precisam devolver o mesmo tipo
+- **modelar** o banco do blog (a Semana 7 ajuda aqui)
+- **PostgreSQL** — banco relacional
+- **Prisma** — o ORM que fala com ele por nós
 
-**Tipos Primitivos**
-- Inteiros com tamanho explicito no nome (`u8`, `i32`, `usize`)
-- `char` sempre Unicode de 4 bytes — nao e o `char` de 1 byte do C
-- Array `[T; N]` com checagem de limites — o buffer overflow da Semana 7, corrigido
+E aqui o TDD paga: trocar o array pelo Prisma é **um refactoring gigante** —
+as funções de `posts.ts` mudam por dentro, os testes e as rotas ficam.
+Se os testes continuarem verdes, a troca é segura.
 
-</div>
-
----
-
-# Conexao com a Semana 7
-
-```
-Semana 7  ->  malloc / free manual        ->  Semana 8  ->  ownership automatico
-Semana 7  ->  ponteiro duplo No **cabeca  ->  Semana 8  ->  referencias & (em breve)
-Semana 7  ->  vetor[10] sem checagem      ->  Semana 8  ->  panic controlado
-Semana 7  ->  Big O mede custo em tempo   ->  Semana 8  ->  tipo mede custo em memoria
-Semana 7  ->  troca(&a, &b) com ponteiro  ->  Semana 8  ->  mesma ideia, sem risco de free()
-```
-
-> Voces nao estao aprendendo uma linguagem nova do zero. Estao aprendendo como o compilador pode fazer, automaticamente, a disciplina que vocês tiveram que ter na mao com ponteiro em C.
-
----
-
-# Desafio da Semana 8
-
-### Nivel iniciante
-Complete todos os exercicios de `00_intro` ate `03_if` no rustlings (`intro1-2`, `variables1-6`, `functions1-5`, `if1-2`). Para cada um, escreva em um comentario o que o erro do compilador disse ANTES de voce corrigir.
-
-### Nivel intermediario
-Complete tambem `04_primitive_types` (`primitive_types1-6`). Depois, escreva um programa Rust do zero (`cargo new`) que recebe um array fixo de 10 numeros, usa um `if` como expressao para classificar cada numero como par ou impar, e imprime o resultado.
-
-### Nivel avancado
-Reimplemente em Rust o `selection_sort` da Semana 7 usando um array `[i32; N]` de tamanho fixo — sem usar `Vec` ainda. Compare o codigo com a versao em C: onde voce precisou de menos codigo defensivo (checagem de limites, `NULL`) porque o compilador ja garantia isso?
+O design que vocês escreveram hoje **não muda**.
+Só a fonte de dados muda.
 
 ---
 
 <!-- _class: cover -->
 
-## Clube de Desenvolvimento Web — Semana 8
+## Clube de Desenvolvimento Web — Semana 9
 
-# O compilador como seu primeiro revisor de codigo
+# Sua API rodando. Seu container no ar.
 
-*Nao importa o nivel. Importa entregar — deixando o compilador pegar o que a vista humana deixa passar.*
+Daqui para frente é construir.

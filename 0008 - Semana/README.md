@@ -187,7 +187,7 @@ style: |
 
 <!-- _class: cover -->
 
-## Clube de Desenvolvimento Web — Semana 7
+## Clube de Desenvolvimento Web — Semana 8
 
 # Estruturas de Dados e Complexidade
 
@@ -1095,7 +1095,7 @@ Implemente uma lista encadeada completa em C com `inserir_inicio`, `inserir_fim`
 
 <!-- _class: cover -->
 
-## Clube de Desenvolvimento Web — Semana 7
+## Clube de Desenvolvimento Web — Semana 8
 
 # O codigo certo importa mais que a maquina rapida
 
