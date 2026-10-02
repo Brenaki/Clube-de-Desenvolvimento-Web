@@ -1,0 +1,6 @@
+.git
+.agents
+.codex
+node_modules
+npm-debug.log*
+bun-debug.log*
